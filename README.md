@@ -23,7 +23,7 @@ Este repositorio contiene código y notebooks para la detección de transaccione
 
 Los datos provienen de un dataset público de Kaggle con transacciones marcadas como fraude https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset?resource=download.
 
-Nota: por razones de gran tamaño (excede 400 MB), el dataset no está incluido en este repositorio. Descarga los datos de Kaggle y coloca el/los archivo(s) CSV en la carpeta `data/`.
+Nota: por razones de gran tamaño (excede 400 MB), el dataset no está incluido en este repositorio. Descarga los datos de Kaggle y coloca el archivo CSV en la carpeta `data/`.
 
 ## Requisitos
 
