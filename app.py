@@ -24,7 +24,7 @@ st.set_page_config(
 
 pio.templates.default = "plotly_white"
 
-st.title("💳 Fraud Detection Dashboard")
+st.title("Fraud Detection Dashboard")
 
 # ----------------------------
 # MODELO + DATA
