@@ -8,5 +8,4 @@ nbformat
 ipykernel
 streamlit
 xgboost
-hdbscan
 kaleido
