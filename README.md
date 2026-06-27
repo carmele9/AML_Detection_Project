@@ -14,8 +14,6 @@ Este proyecto analiza y predice transacciones fraudulentas usando un dataset pú
 - [Resultados esperados](#resultados-esperados)
 - [Cómo reproducir los experimentos](#cómo-reproducir-los-experimentos)
 - [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
 
 ## Descripción
 
@@ -104,7 +102,3 @@ Si quieres contribuir:
 1. Abre un issue describiendo la propuesta o el bug.
 2. Crea un branch nuevo para tu trabajo.
 3. Envía un pull request con una descripción clara de los cambios.
-
-## Licencia
-
-Añade aquí la licencia del proyecto (por ejemplo, MIT). Si no estás seguro, añade un archivo `LICENSE` con la licencia que prefieras.
