@@ -23,29 +23,15 @@ Este repositorio contiene código y notebooks para la detección de transaccione
 
 ## Dataset
 
-Los datos provienen de un dataset público de Kaggle con transacciones marcadas como fraude. (Añade aquí el nombre exacto del dataset y el enlace de Kaggle si lo deseas, por ejemplo: `https://www.kaggle.com/` seguido del dataset).
+Los datos provienen de un dataset público de Kaggle con transacciones marcadas como fraude https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset?resource=download.
 
-Nota: por razones de licencia/privacidad, el dataset no está incluido en este repositorio. Descarga los datos de Kaggle y coloca el/los archivo(s) CSV en la carpeta `data/`.
+Nota: por razones de gran tamaño (excede 400 MB), el dataset no está incluido en este repositorio. Descarga los datos de Kaggle y coloca el/los archivo(s) CSV en la carpeta `data/`.
 
 ## Requisitos
 
 - Python 3.8+
 - Jupyter Notebook / JupyterLab
-- Dependencias (puedes instalarlas con pip):
-
-```bash
-pip install -r requirements.txt
-```
-
-Si no existe `requirements.txt`, las librerías mínimas recomendadas son:
-
-- numpy
-- pandas
-- scikit-learn
-- matplotlib
-- seaborn
-- imbalanced-learn (opcional, para balanceo de clases)
-- xgboost o lightgbm (opcional, para modelos de boosting)
+- Dependencias (puedes instalarlas con pip)
 
 ## Instalación
 
@@ -74,32 +60,23 @@ pip install -r requirements.txt
 
 - data/                -> Carpeta para los datasets (no incluída en el repo)
 - notebooks/           -> Notebooks de análisis exploratorio y experimentos
-- src/                 -> Código fuente (preprocesamiento, entrenamiento, utilidades)
-- models/              -> Modelos entrenados / checkpoints
-- reports/             -> Visualizaciones y reportes
+- models/              -> Mejor Modelo entrenado / checkpoints
+- app.py               -> Visualizacion y reporte con Streamlit
 - README.md            -> Este archivo
 - requirements.txt     -> Dependencias del proyecto
-
-Ajusta esta estructura según cómo organizaste el repo.
 
 ## Uso
 
 - Explora los notebooks en `notebooks/` para ver el flujo de trabajo.
-- Usa los scripts en `src/` para ejecutar preprocesamiento o entrenamiento desde línea de comandos. Ejemplo:
+- Usa los scripts en `notebooks/` para ejecutar preprocesamiento o entrenamiento. 
 
-```bash
-python src/train.py --data data/transactions.csv --output models/model.pkl
-```
-
-(Sustituye por los comandos reales que tengas en el proyecto).
 
 ## Flujo de trabajo y metodologías
 
 1. Carga y limpieza de datos: manejo de valores faltantes, formatos y tipos.
-2. Ingeniería de features: creación de variables temporales, agregados por usuario/cuenta, normalización/estandarización.
-3. Balanceo de clases: técnicas como undersampling, oversampling (SMOTE) o ajuste de pesos en el modelo.
-4. Selección y entrenamiento de modelos: regresión logística, Random Forest, XGBoost/LightGBM, redes neuronales, etc.
-5. Evaluación: validación cruzada, curvas ROC/PR, matriz de confusión, precisión/recall/F1.
+2. Ingeniería de features: creación de variables, agregados por usuario/cuenta, normalización/estandarización.
+3. Selección y entrenamiento de modelos: regresión logística, Random Forest, XGBoost, Gradient Boosting.
+5. Evaluación: curvas ROC/PR, matriz de confusión, precisión/recall/F1.
 
 ## Evaluación y métricas
 
@@ -110,19 +87,15 @@ Para problemas de fraude (clases desbalanceadas) se recomienda usar métricas co
 - Precision, Recall, F1-score (especialmente Recall si priorizas capturar fraudes)
 - Matriz de confusión
 
-Incluye validación temporal si los datos están ordenados por tiempo.
-
 ## Resultados esperados
 
-En `reports/` deberías encontrar gráficos y tablas con los resultados de los experimentos (por ejemplo: curvas ROC, importancia de features, métricas por modelo).
+En `app.py` deberías encontrar gráficos y tablas con los resultados de los experimentos.
 
 ## Cómo reproducir los experimentos
 
 1. Coloca los datos en `data/`.
 2. Ejecuta los notebooks en orden (o scripts) tal como se indica en `notebooks/`.
-3. Guarda los artefactos en `models/` y los reportes en `reports/`.
-
-Para automatizar, puedes usar un script `run_experiments.sh` o un Makefile.
+3. Guarda los artefactos en `models/`.
 
 ## Contribuciones
 
@@ -135,12 +108,3 @@ Si quieres contribuir:
 ## Licencia
 
 Añade aquí la licencia del proyecto (por ejemplo, MIT). Si no estás seguro, añade un archivo `LICENSE` con la licencia que prefieras.
-
-## Contacto
-
-Para preguntas o sugerencias, contacta a: carmele9 (puedes añadir tu email aquí si lo deseas).
-
-
----
-
-README generado y adaptado para el proyecto AML_Detection_Project. Asegúrate de ajustar enlaces, nombres de archivos y comandos según el contenido real del repositorio.
